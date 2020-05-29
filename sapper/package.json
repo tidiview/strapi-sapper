@@ -1,6 +1,8 @@
 {
   "name": "TODO",
   "description": "TODO",
+  "license": "MIT",
+  "author": "François VIDIT",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
