@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "sapper",
+  "description": "sapper application for the new version of francois-vidit.com",
   "license": "MIT",
   "author": "François VIDIT",
   "version": "0.0.1",
