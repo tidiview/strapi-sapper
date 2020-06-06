@@ -6,6 +6,7 @@
   "license": "MIT",
   "description": "A Strapi application",
   "scripts": {
+    "dev": "strapi dev",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
@@ -21,7 +22,6 @@
     "strapi-plugin-content-type-builder": "3.0.1",
     "strapi-plugin-documentation": "3.0.1",
     "strapi-plugin-email": "3.0.1",
-    "strapi-plugin-graphql": "3.0.1",
     "strapi-plugin-upload": "3.0.1",
     "strapi-plugin-users-permissions": "3.0.1",
     "strapi-utils": "3.0.1"
