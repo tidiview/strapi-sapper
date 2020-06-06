@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "06/06/2020 7:54:12 PM"
+    "x-generation-date": "06/06/2020 9:04:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -867,7 +867,7 @@
         "parameters": []
       }
     },
-    "/posts/{id}": {
+    "/posts/{slug}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -919,7 +919,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "slug",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -992,7 +992,7 @@
         },
         "parameters": [
           {
-            "name": "id",
+            "name": "slug",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -1055,7 +1055,7 @@
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "slug",
             "in": "path",
             "description": "",
             "deprecated": false,
