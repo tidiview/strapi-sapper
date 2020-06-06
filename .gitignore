@@ -1,1 +1,3 @@
-node-modules
+.DS_Store
+frv2-6.code-workspace
+/node_modules/
