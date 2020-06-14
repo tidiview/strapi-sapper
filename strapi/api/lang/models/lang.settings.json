@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "langs",
+  "info": {
+    "name": "lang"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "code": {
+      "type": "enumeration",
+      "enum": [
+        "fr",
+        "ja",
+        "en"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "labelAlt": {
+      "type": "string"
+    }
+  }
+}

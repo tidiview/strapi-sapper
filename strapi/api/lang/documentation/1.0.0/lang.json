@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/posts": {
+    "/langs": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Post"
+                    "$ref": "#/components/schemas/Lang"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Lang"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost"
+                "$ref": "#/components/schemas/NewLang"
               }
             }
           }
         }
       }
     },
-    "/posts/count": {
+    "/langs/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "parameters": []
       }
     },
-    "/posts/{slug}": {
+    "/langs/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Lang"
                 }
               }
             }
@@ -359,11 +359,11 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Post"
+                  "$ref": "#/components/schemas/Lang"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "requestBody": {
           "description": "",
@@ -429,14 +429,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPost"
+                "$ref": "#/components/schemas/NewLang"
               }
             }
           }
         },
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -495,11 +495,11 @@
         },
         "summary": "",
         "tags": [
-          "Post"
+          "Lang"
         ],
         "parameters": [
           {
-            "name": "slug",
+            "name": "id",
             "in": "path",
             "description": "",
             "deprecated": false,
@@ -514,67 +514,50 @@
   },
   "components": {
     "schemas": {
-      "Post": {
+      "Lang": {
         "required": [
-          "id",
-          "title",
-          "slug",
-          "body"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "title": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "fr",
+              "ja",
+              "en"
+            ]
+          },
+          "name": {
             "type": "string"
           },
-          "slug": {
+          "label": {
             "type": "string"
           },
-          "body": {
+          "labelAlt": {
             "type": "string"
-          },
-          "lang": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "label": {
-                "type": "string"
-              },
-              "labelAlt": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewPost": {
-        "required": [
-          "title",
-          "slug",
-          "body"
-        ],
+      "NewLang": {
         "properties": {
-          "title": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "fr",
+              "ja",
+              "en"
+            ]
+          },
+          "name": {
             "type": "string"
           },
-          "slug": {
+          "label": {
             "type": "string"
           },
-          "body": {
-            "type": "string"
-          },
-          "lang": {
+          "labelAlt": {
             "type": "string"
           }
         }
@@ -583,7 +566,7 @@
   },
   "tags": [
     {
-      "name": "Post"
+      "name": "Lang"
     }
   ]
 }

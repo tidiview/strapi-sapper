@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "post"
+    "name": "LocalePost"
   },
   "options": {
     "increments": true,
@@ -19,10 +19,13 @@
       "required": true,
       "unique": true
     },
-    "html": {
+    "body": {
       "type": "text",
       "required": true,
       "unique": true
+    },
+    "lang": {
+      "model": "lang"
     }
   }
 }
